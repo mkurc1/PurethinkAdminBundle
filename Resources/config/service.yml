@@ -1,0 +1,13 @@
+services:
+    sonata.admin.helper:
+        class: Purethink\AdminBundle\Admin\AdminHelper
+        arguments: ['@sonata.admin.pool']
+
+    sonata.admin.controller.admin:
+        class: Purethink\AdminBundle\Controller\HelperController
+        arguments: ['@twig', '@sonata.admin.pool', '@sonata.admin.helper', '@validator']
+
+    sonata.admin.form.type.admin:
+        class: Purethink\AdminBundle\Form\Type\AdminType
+        tags:
+            - { name: form.type, alias: sonata_type_admin }

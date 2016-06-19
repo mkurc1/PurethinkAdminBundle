@@ -1,0 +1,34 @@
+{
+    "name": "mkurc1/purethink-admin-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "description": "Symfony CMSBundle",
+    "homepage": "http://purethink.pl",
+    "keywords": [
+        "cms",
+        "admin",
+        "purethink"
+    ],
+    "authors": [
+        {
+            "name": "Michał Kurcewicz",
+            "email": "mkurc1@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Purethink\\AdminBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=5.3.9",
+        "knplabs/knp-paginator-bundle": "~2.4",
+        "knplabs/knp-menu-bundle": "1.1.*",
+        "sonata-project/admin-bundle": "^2.3",
+        "sonata-project/doctrine-orm-admin-bundle": "^2.3",
+        "sonata-project/formatter-bundle": "~2.3",
+        "pixassociates/sortable-behavior-bundle": "0.2.*",
+        "mkurc1/purethink-core-bundle" : "dev-master",
+        "mkurc1/purethink-cms-bundle" : "dev-master"
+    }
+}

@@ -1,0 +1,114 @@
+twig:
+    form:
+        resources:
+            - 'SonataMediaBundle:Form:media_widgets.html.twig'
+            - 'SonataCoreBundle:Form:datepicker.html.twig'
+
+doctrine:
+    dbal:
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+
+pix_sortable_behavior:
+    position_field: ~
+
+sonata_admin:
+    title: PureThink
+    templates:
+        layout: "PurethinkAdminBundle:Admin:layout.html.twig"
+    security:
+        handler: sonata.admin.security.handler.role
+    dashboard:
+        blocks:
+            - { position: left, type: sonata.admin.block.admin_list }
+        groups:
+            sonata.admin.group.content:
+                label: admin.dashboard.cms
+                icon: <i class="fa fa-th"></i>
+                label_catalogue: AppBundle
+                items:
+                    - app.admin.article
+                    - app.admin.menu_type
+                    - app.admin.extension
+                    - app.admin.component
+                    - app.admin.tag
+                    - sonata.media.admin.media
+                    - sonata.media.admin.gallery
+            sonata.admin.group.contact:
+                label: admin.dashboard.contact
+                icon: <i class="fa fa-comment"></i>
+                label_catalogue: AppBundle
+                items:
+                    - app.admin.contact
+            sonata.admin.group.administration:
+                label: sonata_administration
+                icon: <i class="fa fa-cogs"></i>
+                label_catalogue: SonataAdminBundle
+                items:
+                    - sonata.user.admin.user
+                    - app.admin.language
+                    - app.admin.site
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        sonata.admin.block.search_result:
+            contexts: [admin]
+        sonata.block.service.text:
+        sonata.user.block.account:
+        sonata.user.block.menu:
+            contexts: [user]
+        app.block.language:
+        app.block.menu:
+        app.block.component:
+
+sonata_user:
+    admin:
+        user:
+            class: Purethink\AdminBundle\Admin\UserAdmin
+
+ivory_ck_editor:
+    default_config: default
+    configs:
+        default:
+            toolbar: "cke_toolbar"
+            height: "400px"
+            filebrowserBrowseRoute: admin_purethink_core_media_ckeditor_browser
+            filebrowserImageBrowseRoute: admin_purethink_core_media_ckeditor_browser
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+            filebrowserUploadRoute: admin_purethink_core_media_ckeditor_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            filebrowserImageUploadRoute: admin_purethink_core_media_ckeditor_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+        excerpt:
+            toolbar: "cke_toolbar"
+            height: "200px"
+            filebrowserBrowseRoute: admin_purethink_core_media_ckeditor_browser
+            filebrowserImageBrowseRoute: admin_purethink_core_media_ckeditor_browser
+            filebrowserImageBrowseRouteParameters:
+                provider: sonata.media.provider.image
+            filebrowserUploadRoute: admin_purethink_core_media_ckeditor_upload
+            filebrowserUploadRouteParameters:
+                provider: sonata.media.provider.file
+            filebrowserImageUploadRoute: admin_purethink_core_media_ckeditor_upload
+            filebrowserImageUploadRouteParameters:
+                provider: sonata.media.provider.image
+    toolbars:
+        configs:
+            cke_toolbar : ['@clipboard', '@editing', '@links', '@insert', '@tools', '@document', '/', '@basicstyles', '@paragraph', '@styles', '@colors']
+        items:
+            clipboard   : ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']
+            editing     : ['Scayt']
+            links       : ['Link', 'Unlink', 'Anchor']
+            insert      : ['Image', 'Table', 'HorizontalRule',  'SpecialChar']
+            tools       : ['Maximize']
+            document    : ['Source']
+            basicstyles : ['Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat']
+            paragraph   : ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft',  'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+            styles      : ['Styles', 'Format']
+            colors      : ['TextColor', 'BGColor']
