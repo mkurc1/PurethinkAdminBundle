@@ -52,7 +52,7 @@ sonata_admin:
             sonata.admin.group.content:
                 label: admin.dashboard.cms
                 icon: '<i class="fa fa-th"></i>'
-                label_catalogue: AppBundle
+                label_catalogue: PurethinkAdminBundle
                 items:
                     - app.admin.article
                     - app.admin.menu_type
@@ -63,7 +63,7 @@ sonata_admin:
             sonata.admin.group.contact:
                 label: admin.dashboard.contact
                 icon: '<i class="fa fa-comment"></i>'
-                label_catalogue: AppBundle
+                label_catalogue: PurethinkAdminBundle
                 items:
                     - app.admin.contact
             sonata.admin.group.classification:

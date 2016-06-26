@@ -1,0 +1,153 @@
+default: default
+media: Media
+gallery: Galeria
+sonata_media: Biblioteka Mediów
+no_provider_available: Brak dostawcy
+title_select_provider: Wybierz dostawcę mediów
+
+breadcrumb:
+    link_media_create: Utwórz
+    link_media_list: Media
+    link_media_edit: Edycja
+    link_media_view: Widok
+    link_media_delete: Usuń
+    link_gallery_create: Utwórz
+    link_media_show: Pokaż
+    link_gallery_list: Galerie
+    link_gallery_edit: Edycja
+    link_gallery_delete: Usuń
+description:
+    roles_download_strategy: 'Media mogą być pobrane przez użytkowników z tymi rolami : %roles%.'
+    public_download_strategy: Media moga zostać pobrane przez wszystkich.
+    forbidden_download_strategy: Nikt nie może pobrać mediów.
+filter:
+    label_name: Nazwa
+    label_provider_reference: Referencje dostawcy
+    label_enabled: Włączony
+    label_context: Kontekst
+    label_provider_name: Nazwa dostawcy
+    label_category: Kategoria
+    label_author_name: Autor
+    label_width: Szerokość
+    label_height: Wysokość
+    label_content_type: Typ kontentu
+form:
+    label_category: Kategoria
+    label_enabled: Włączony
+    label_media: Media
+    label_position: Pozycja
+    label_context: Kontekst
+    label_name: Nazwa
+    label_default_format: Format
+    label_gallery_has_medias: Media
+    label_author_name: Autor
+    label_cdn_is_flushable: Wyczyść CDN
+    label_description: Opis
+    label_copyright: Prawa autorskie
+    label_binary_content: Plik
+    label_mode: Tryb
+    label_number: Numer
+    label_order: Zamówienie
+    label_order_name: Nazwa zamówienia
+    label_order_created_at: Data utworzenia zamówienia
+    label_order_updated_at: Data modyfikacji zamówienia
+    label_sort: Sortowanie
+    label_sort_asc: Sortowanie rosnąco
+    label_sort_desc: Sortowanie malejąca
+    label_mode_public: Tryb publiczny
+    label_mode_admin: Tryb administracyjny
+    label_class: Klasa
+    label_title: Tytuł
+    label_content: Zawartość
+    label_orientation: Orientacja
+    label_gallery: Galeria
+    label_format: Format
+    label_pause_time: Czas prerwy
+    label_start_paused: Start po przerwie
+    label_wrap: Wznawiać
+    label_orientation_left: Orientacja w lewo
+    label_orientation_right: Orientacja w prawo
+label:
+    size: Rozmiar
+    length: Długość
+    width: Szerokość
+    height: Wysokość
+    content_type: Typ kontentu
+    copyright: Prawa autorskie
+    author_name: Autor
+    cdn: CDN
+    to_be_flushed: Spłukiwalny
+    flushed_at: Wyczyszczony CDN
+    public_url: Publiczny URL
+    name: Nazwa
+    file: Plik
+    author: Autor
+    enabled: Włączony
+    cdn_is_flushable: Wyczyszczony CDN
+    cdn_flush_identifier: CDN flush identifier
+    video_reference: Zmień video
+    description: Opis
+    select_context: Kontekst :
+    select_provider: Typ :
+    protected_download_url: Chroniony URL
+    protected_download_url_notice: Uwaga
+    edit_with_pixlr: Edytuj te media poprzez Pixlr
+    pixlr_warning: '<span class="label label-warning">Ważne</span> jeśli masz zamiar wystawiać media na <strong> zewnętrzną usługę </ strong>. <br />Jeśli pracujesz nad poufnymi materiałami, proszę nie używać tej usługi.'
+    pixlr_express_editor: '<strong style="color: white">Ekspresowy edytor</strong> <br />Prosty interfejs do szybkiej edycji'
+    pixlr_advanced_editor: '<strong style="color: white">Zaawansowany edytor</strong> <br />Tylko dla doświadczonych użytkowników'
+link:
+    all_providers: Wszystkie
+    test_protected_url: Podgląd linku
+    label_enabled: Włączony
+    label_name: Nazwa
+    label_author_name: Autor
+    label_context: Kontekst
+    label_default_format: Format
+    label__action: Akcja
+    label_custom: Własny
+    label_author: Autor
+sidemenu:
+    link_edit_media: Edycja
+    link_media_view: Widok
+sonata:
+    media:
+        provider:
+            dailymotion: DailyMotion
+            youtube: YouTube
+            vimeo: Vimeo
+            image: Obrazek
+            file: Plik
+        block:
+            media: Media
+            feature_media: Cechy media
+            gallery: Galeria
+            gallery_list: Lista galerii
+title:
+    media_preview: Podgląd
+    media_thumbnail: Miniaturka
+    informations: Informacje
+    formats: Formaty
+link_media: Link do pliku
+no_linked_media: Brak link do pliku
+widget_label_type: Typ kontentu
+widget_label_context: Kontekst
+widget_label_unlink: Usuń link do pliku
+widget_label_binary_content: Plik
+widget_headline_information: Informacje
+sonata_media_gallery_index: Galeria
+sonata_template_box_media_gallery_block: To jest block Sonata gallery media. Możesz go modyfikować.
+list:
+    label_description: Opis
+    label_size: Rozmiar
+    label_enabled: Włączony
+    label_name: Nazwa
+    label_author_name: Autor
+    label_context: Kontekst
+    label_default_format: lFormat
+    label__action: Akcja
+    label_custom: Własny
+    label_author: Autor
+label_gallery_enabled: Aktywne
+label_gallery_disabled: Nieaktywny
+no_galleries_found: Galeria nieodnaleziona
+view_all_galleries: Wszystkie galerie
