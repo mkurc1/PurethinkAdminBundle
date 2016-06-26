@@ -13,6 +13,7 @@ breadcrumb:
     link_tag_list: Tag
     link_context_list: Kontekst
     link_category_tree: Kategoria
+    link_tag_create: Utwórz
 list:
     label_name: Nazwa
     label_slug: Slug

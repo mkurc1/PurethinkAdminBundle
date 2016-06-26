@@ -39,6 +39,12 @@ sonata_formatter:
             service: sonata.formatter.text.twigengine
             extensions: []
 
+sonata_classification:
+    admin:
+        tag:
+            class:        Purethink\AdminBundle\Admin\TagAdmin
+            translation:  SonataClassificationBundle
+
 sonata_admin:
     title: PureThink
     templates:
