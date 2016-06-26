@@ -143,7 +143,7 @@ list:
     label_name: Nazwa
     label_author_name: Autor
     label_context: Kontekst
-    label_default_format: lFormat
+    label_default_format: Format
     label__action: Akcja
     label_custom: Własny
     label_author: Autor
