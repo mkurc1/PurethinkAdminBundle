@@ -28,7 +28,7 @@
         "sonata-project/doctrine-orm-admin-bundle": "^2.3",
         "sonata-project/formatter-bundle": "~2.3",
         "pixassociates/sortable-behavior-bundle": "0.2.*",
-        "mkurc1/purethink-core-bundle" : "dev-master",
-        "mkurc1/purethink-cms-bundle" : "dev-master"
+        "mkurc1/purethink-core-bundle" : "^0.0.1",
+        "mkurc1/purethink-cms-bundle" : "^0.0.1"
     }
 }
