@@ -51,26 +51,31 @@ sonata_admin:
         groups:
             sonata.admin.group.content:
                 label: admin.dashboard.cms
-                icon: <i class="fa fa-th"></i>
+                icon: '<i class="fa fa-th"></i>'
                 label_catalogue: AppBundle
                 items:
                     - app.admin.article
                     - app.admin.menu_type
                     - app.admin.extension
                     - app.admin.component
-                    - sonata.classification.admin.tag
-                    - sonata.classification.admin.category
                     - sonata.media.admin.media
                     - sonata.media.admin.gallery
             sonata.admin.group.contact:
                 label: admin.dashboard.contact
-                icon: <i class="fa fa-comment"></i>
+                icon: '<i class="fa fa-comment"></i>'
                 label_catalogue: AppBundle
                 items:
                     - app.admin.contact
+            sonata.admin.group.classification:
+                label:           sonata_classification
+                label_catalogue: SonataClassificationBundle
+                icon:            '<i class="fa fa-sitemap"></i>'
+                items:
+                    - sonata.classification.admin.category
+                    - sonata.classification.admin.tag
             sonata.admin.group.administration:
                 label: sonata_administration
-                icon: <i class="fa fa-cogs"></i>
+                icon: '<i class="fa fa-cogs"></i>'
                 label_catalogue: SonataAdminBundle
                 items:
                     - sonata.user.admin.user

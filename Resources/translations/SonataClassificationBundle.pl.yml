@@ -1,0 +1,49 @@
+sonata_classification: Klasyfikacje
+label_categories: Kategorie
+label_tags: Tagi
+label_collections: Kolekcje
+active: aktywny
+disabled: nieaktywny
+tree_catalog_title: Kategorie
+label_contexts: Konteksty
+
+breadcrumb:
+    link_collection_list: Kolekcja
+    link_category_list: Kategoria
+    link_tag_list: Tag
+    link_context_list: Kontekst
+    link_category_tree: Kategoria
+list:
+    label_name: Nazwa
+    label_slug: Slug
+    label_description: Opis
+    label_enabled: Aktywne
+    label_created_at: Data utworzenia
+    label_updated_at: Data modyfikacji
+    label_position: Pozycjia
+    label_parent: Rodzic
+    label_id: ID
+    label_context: Konteks
+filter:
+    label_name: Nazwa
+    label_enabled: Aktywne
+    label_parent: Rodzic
+    label_id: ID
+    label_context: Konteks
+form:
+    label_name: Nazwa
+    label_description: Opis
+    label_enabled: Aktywne
+    label_slug: Slug
+    label_created_at: Data utworzenia
+    label_updated_at: Data modyfikacji
+    label_position: Pozycja
+    label_parent: Rodzic
+    label_media: Media
+    label_id: ID
+    label_context: Konteks
+element:
+    tree_site_label: Kategorie
+classification:
+    list_mode: Lista
+    tree_mode: Drzewo
