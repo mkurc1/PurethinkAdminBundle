@@ -12,12 +12,6 @@ services:
         class: Purethink\AdminBundle\Admin\LanguageAdmin
         arguments: [null, Purethink\CMSBundle\Entity\Language, SonataAdminBundle:CRUD]
 
-    app.admin.tag:
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: CMS, label: "admin.sidebar.tag" }
-        class: Purethink\AdminBundle\Admin\TagAdmin
-        arguments: [null, Purethink\CoreBundle\Entity\Tag, SonataAdminBundle:CRUD]
-
     app.admin.site:
         tags:
             - { name: sonata.admin, manager_type: orm, group: CMS, label: "admin.sidebar.site" }

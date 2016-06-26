@@ -2,6 +2,7 @@ twig:
     form:
         resources:
             - 'SonataMediaBundle:Form:media_widgets.html.twig'
+            - 'SonataFormatterBundle:Form:formatter.html.twig'
             - 'SonataCoreBundle:Form:datepicker.html.twig'
 
 doctrine:
@@ -11,6 +12,32 @@ doctrine:
 
 pix_sortable_behavior:
     position_field: ~
+
+sonata_formatter:
+    formatters:
+        markdown:
+            service: sonata.formatter.text.markdown
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+        text:
+            service: sonata.formatter.text.text
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+        rawhtml:
+            service: sonata.formatter.text.raw
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+        richhtml:
+            service: sonata.formatter.text.raw
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+        twig:
+            service: sonata.formatter.text.twigengine
+            extensions: []
 
 sonata_admin:
     title: PureThink
@@ -31,7 +58,8 @@ sonata_admin:
                     - app.admin.menu_type
                     - app.admin.extension
                     - app.admin.component
-                    - app.admin.tag
+                    - sonata.classification.admin.tag
+                    - sonata.classification.admin.category
                     - sonata.media.admin.media
                     - sonata.media.admin.gallery
             sonata.admin.group.contact:
