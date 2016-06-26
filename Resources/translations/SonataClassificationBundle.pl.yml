@@ -20,7 +20,7 @@ list:
     label_enabled: Aktywne
     label_created_at: Data utworzenia
     label_updated_at: Data modyfikacji
-    label_position: Pozycjia
+    label_position: Pozycja
     label_parent: Rodzic
     label_id: ID
     label_context: Konteks
