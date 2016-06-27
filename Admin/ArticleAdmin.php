@@ -14,7 +14,9 @@ class ArticleAdmin extends AbstractAdmin
 {
     private $securityContext;
 
-    /** @var Language */
+    /**
+     * @var Language
+     */
     private $language;
 
     protected $formOptions = [
