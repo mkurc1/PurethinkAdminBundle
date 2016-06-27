@@ -3,14 +3,14 @@
 namespace Purethink\AdminBundle\Admin;
 
 use Purethink\CMSBundle\Service\Language;
-use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
 
-class ArticleAdmin extends Admin
+class ArticleAdmin extends AbstractAdmin
 {
     private $securityContext;
 

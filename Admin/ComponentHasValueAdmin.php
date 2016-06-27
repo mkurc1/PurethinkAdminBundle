@@ -4,12 +4,12 @@ namespace Purethink\AdminBundle\Admin;
 
 use Purethink\CMSBundle\Entity\ExtensionHasField;
 use Purethink\CMSBundle\Service\Language;
-use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\Validator\Constraints\NotNull;
 use Purethink\CMSBundle\Entity\ComponentHasValue;
 
-class ComponentHasValueAdmin extends Admin
+class ComponentHasValueAdmin extends AbstractAdmin
 {
     /** @var Language */
     private $language;

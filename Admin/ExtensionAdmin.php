@@ -2,13 +2,13 @@
 
 namespace Purethink\AdminBundle\Admin;
 
-use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
 
-class ExtensionAdmin extends Admin
+class ExtensionAdmin extends AbstractAdmin
 {
     protected $datagridValues = [
         '_sort_by'  => 'name',

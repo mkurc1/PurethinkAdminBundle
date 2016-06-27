@@ -2,14 +2,14 @@
 
 namespace Purethink\AdminBundle\Admin;
 
-use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
 
-class MenuTypeAdmin extends Admin
+class MenuTypeAdmin extends AbstractAdmin
 {
     protected $datagridValues = [
         '_sort_by' => 'name'

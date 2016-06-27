@@ -2,11 +2,11 @@
 
 namespace Purethink\AdminBundle\Admin;
 
-use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Form\FormMapper;
 use Purethink\CMSBundle\Entity\ExtensionHasField;
 
-class ExtensionHasFieldAdmin extends Admin
+class ExtensionHasFieldAdmin extends AbstractAdmin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {

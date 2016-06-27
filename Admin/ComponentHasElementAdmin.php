@@ -2,7 +2,7 @@
 namespace Purethink\AdminBundle\Admin;
 
 use Purethink\CMSBundle\Entity\ComponentHasValue;
-use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Pix\SortableBehaviorBundle\Services\PositionHandler;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
 
-class ComponentHasElementAdmin extends Admin
+class ComponentHasElementAdmin extends AbstractAdmin
 {
     protected $formOptions = [
         'cascade_validation' => true

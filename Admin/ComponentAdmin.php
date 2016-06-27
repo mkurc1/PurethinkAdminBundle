@@ -4,7 +4,7 @@ namespace Purethink\AdminBundle\Admin;
 
 use Purethink\CMSBundle\Repository\ExtensionRepository;
 use Purethink\CMSBundle\Service\Language;
-use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -12,7 +12,7 @@ use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
 
-class ComponentAdmin extends Admin
+class ComponentAdmin extends AbstractAdmin
 {
     /** @var Language */
     private $language;

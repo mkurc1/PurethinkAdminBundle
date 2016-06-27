@@ -8,14 +8,14 @@ use Purethink\CMSBundle\Entity\MenuSection;
 use Purethink\CMSBundle\Entity\MenuUrl;
 use Purethink\CMSBundle\Service\AvailableRoute;
 use Purethink\CMSBundle\Service\Language;
-use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
-class MenuAdmin extends Admin
+class MenuAdmin extends AbstractAdmin
 {
     /**
      * @var AvailableRoute
