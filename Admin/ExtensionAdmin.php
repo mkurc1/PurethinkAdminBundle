@@ -41,9 +41,6 @@ class ExtensionAdmin extends AbstractAdmin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id', null, [
-                'label' => 'admin.id'
-            ])
             ->add('name', null, [
                 'label' => 'admin.extension.name'
             ])
@@ -66,9 +63,6 @@ class ExtensionAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('id', null, [
-                'label' => 'admin.id'
-            ])
             ->addIdentifier('name', null, [
                 'label' => 'admin.extension.name'
             ])

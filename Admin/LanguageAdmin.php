@@ -35,9 +35,6 @@ class LanguageAdmin extends AbstractAdmin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id', null, [
-                'label' => 'admin.id'
-            ])
             ->add('name', null, [
                 'label' => 'admin.language.name'
             ])
@@ -52,9 +49,6 @@ class LanguageAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('id', null, [
-                'label' => 'admin.id'
-            ])
             ->addIdentifier('name', null, [
                 'label' => 'admin.language.name'
             ])

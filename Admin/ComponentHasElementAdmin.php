@@ -75,9 +75,6 @@ class ComponentHasElementAdmin extends AbstractAdmin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id', null, [
-                'label' => 'admin.id'
-            ])
             ->add('enabled', null, [
                 'label' => 'admin.component_has_element.enabled'
             ])
@@ -104,9 +101,6 @@ class ComponentHasElementAdmin extends AbstractAdmin
         }
 
         $listMapper
-            ->addIdentifier('id', null, [
-                'label' => 'admin.id'
-            ])
             ->addIdentifier('title', null, [
                 'label' => 'admin.component_has_element.title'
             ])

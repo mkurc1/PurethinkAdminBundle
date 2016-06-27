@@ -57,9 +57,6 @@ class MenuTypeAdmin extends AbstractAdmin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id', null, [
-                'label' => 'admin.id'
-            ])
             ->add('name', null, [
                 'label' => 'admin.menu_type.name'
             ])
@@ -71,10 +68,6 @@ class MenuTypeAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('id', null, [
-                'label' => 'admin.id',
-                'route' => ['name' => 'app.admin.menu.list']
-            ])
             ->addIdentifier('name', null, [
                 'label' => 'admin.menu_type.name',
                 'route' => ['name' => 'app.admin.menu.list']

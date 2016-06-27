@@ -102,9 +102,6 @@ class MenuAdmin extends AbstractAdmin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id', null, [
-                'label' => 'admin.id'
-            ])
             ->add('translations.name', null, [
                 'label' => 'admin.menu.name'
             ])
@@ -130,9 +127,6 @@ class MenuAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('id', null, [
-                'label' => 'admin.id'
-            ])
             ->addIdentifier('name', null, [
                 'label' => 'admin.menu.name'
             ])
