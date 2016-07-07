@@ -45,6 +45,7 @@ admin:
         media: Media
         gallery: Galeria
         tags: Tagi
+        category: Kategoria
 
     component:
         name: Nazwa

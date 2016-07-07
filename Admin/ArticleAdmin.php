@@ -82,6 +82,10 @@ class ArticleAdmin extends AbstractAdmin
             ->add('published', null, [
                 'label' => 'admin.article.published'
             ])
+            ->add('category', 'sonata_type_model_list', [
+                'label'    => 'admin.article.category',
+                'required' => false
+            ])
             ->add('tags', 'sonata_type_model', [
                 'label'    => 'admin.article.tags',
                 'multiple' => true,
