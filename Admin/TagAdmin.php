@@ -19,7 +19,8 @@ class TagAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name');
+            ->add('name')
+            ->add('context');
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
@@ -45,6 +46,9 @@ class TagAdmin extends AbstractAdmin
         $listMapper
             ->addIdentifier('name')
             ->addIdentifier('slug')
+            ->add('context', null, [
+                'sortable' => 'context.name',
+            ])
             ->add("createdAt")
             ->add('updatedAt');
     }
