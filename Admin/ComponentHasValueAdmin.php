@@ -84,6 +84,7 @@ class ComponentHasValueAdmin extends AbstractAdmin
                 ]);
                 break;
             case ExtensionHasField::TYPE_TEXT:
+            case ExtensionHasField::TYPE_NUMBER:
             case ExtensionHasField::TYPE_TEXTAREA:
                 $formMapper->add('translations', 'a2lix_translations', [
                     'label'          => false,
