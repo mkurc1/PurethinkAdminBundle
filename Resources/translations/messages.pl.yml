@@ -87,6 +87,7 @@ admin:
         alias: Alias
         enabled: Aktywne
         media: Media
+        position: Pozycja
 
     menu:
         name: Nazwa

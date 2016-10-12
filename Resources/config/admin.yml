@@ -10,7 +10,9 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: CMS, label: "admin.sidebar.language" }
         class: Purethink\AdminBundle\Admin\LanguageAdmin
-        arguments: [null, Purethink\CMSBundle\Entity\Language, SonataAdminBundle:CRUD]
+        arguments: [null, Purethink\CMSBundle\Entity\Language, 'PurethinkAdminBundle:Admin\LanguageAdmin']
+        calls:
+            - [ setPositionService, ['@pix_sortable_behavior.position']]
 
     app.admin.site:
         tags:

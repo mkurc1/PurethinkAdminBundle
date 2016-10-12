@@ -2,6 +2,7 @@
 
 namespace Purethink\AdminBundle\Controller\Admin;
 
+use Purethink\CMSBundle\Entity\ComponentHasElement;
 use Sonata\AdminBundle\Controller\CRUDController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
@@ -11,6 +12,8 @@ class ComponentHasElementAdminController extends CRUDController
     {
         $request = $this->container->get('request_stack')->getCurrentRequest();
         $id = $request->get($this->admin->getIdParameter());
+
+        /** @var ComponentHasElement $object */
         $object = $this->admin->getObject($id);
 
         $position_service = $this->get('pix_sortable_behavior.position');

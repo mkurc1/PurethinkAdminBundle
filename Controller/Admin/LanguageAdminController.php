@@ -2,19 +2,22 @@
 
 namespace Purethink\AdminBundle\Controller\Admin;
 
+use Purethink\CMSBundle\Entity\Language;
 use Sonata\AdminBundle\Controller\CRUDController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-class ComponentHasElementAdminController extends CRUDController
+class LanguageAdminController extends CRUDController
 {
     public function moveAction($id, $position)
     {
         $request = $this->container->get('request_stack')->getCurrentRequest();
         $id = $request->get($this->admin->getIdParameter());
+
+        /** @var Language $object */
         $object = $this->admin->getObject($id);
 
         $position_service = $this->get('pix_sortable_behavior.position');
-        $lastPosition = $object->getComponent()->getElements()->count() - 1;
+        $lastPosition = $this->getLastPosition();
         $position = $position_service->getPosition($object, $position, $lastPosition);
 
         $object->setPosition($position);
@@ -34,4 +37,18 @@ class ComponentHasElementAdminController extends CRUDController
         return new RedirectResponse($this->admin->generateUrl('list', $this->admin->getFilterParameters()));
     }
 
+    private function getEntityManager()
+    {
+        return $this->get('doctrine.orm.entity_manager');
+    }
+
+    private function getLanguageRepository()
+    {
+        return $this->getEntityManager()->getRepository('PurethinkCMSBundle:Language');
+    }
+
+    private function getLastPosition()
+    {
+        return $this->getLanguageRepository()->getLastPosition();
+    }
 }
