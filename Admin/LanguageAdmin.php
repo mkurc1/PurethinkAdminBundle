@@ -23,6 +23,15 @@ class LanguageAdmin extends AbstractAdmin
             ->add('alias', null, [
                 'label' => 'admin.language.alias'
             ])
+            ->add('media', 'sonata_type_model_list', [
+                'required' => false,
+                'label'    => 'admin.language.media'
+            ], [
+                'link_parameters' => [
+                    'context'  => 'default',
+                    'provider' => 'sonata.media.provider.image'
+                ]
+            ])
             ->end()
             ->with('admin.options', ['class' => 'col-md-4'])
             ->add('enabled', null, [
