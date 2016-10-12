@@ -64,6 +64,11 @@ class ComponentAdmin extends AbstractAdmin
             ->add('media', 'sonata_type_model_list', [
                 'required' => false,
                 'label'    => 'admin.component.media'
+            ], [
+                'link_parameters' => [
+                    'context'  => 'default',
+                    'provider' => 'sonata.media.provider.image'
+                ]
             ])
             ->add('extension', 'entity', [
                 'class'         => 'PurethinkCMSBundle:Extension',

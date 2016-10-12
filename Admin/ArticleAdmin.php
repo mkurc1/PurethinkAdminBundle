@@ -69,6 +69,11 @@ class ArticleAdmin extends AbstractAdmin
             ->add('media', 'sonata_type_model_list', [
                 'required' => false,
                 'label'    => 'admin.article.media'
+            ], [
+                'link_parameters' => [
+                    'context'  => 'default',
+                    'provider' => 'sonata.media.provider.image'
+                ]
             ])
             ->add('gallery', 'sonata_type_model_list', [
                 'label'    => 'admin.article.gallery',
