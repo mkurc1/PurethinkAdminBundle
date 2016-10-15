@@ -149,7 +149,7 @@ ivory_ck_editor:
             insert      : ['Image', 'Table', 'HorizontalRule',  'SpecialChar']
             tools       : ['Maximize']
             document    : ['Source']
-            basicstyles : ['Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat']
+            basicstyles : ['Bold', 'Italic', 'Underline', 'Strike', 'Blockquote', '-', 'RemoveFormat']
             paragraph   : ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft',  'JustifyCenter', 'JustifyRight', 'JustifyBlock']
             styles      : ['Styles', 'Format']
             colors      : ['TextColor', 'BGColor']
