@@ -42,9 +42,6 @@ class MenuTypeAdmin extends AbstractAdmin
             ->add('name', null, [
                 'label' => 'admin.menu_type.name'
             ])
-            ->add('description', 'textarea', [
-                'label' => 'admin.menu_type.description'
-            ])
             ->end()
             ->with('admin.options', ['class' => 'col-md-4'])
             ->add('slug', null, [
@@ -74,9 +71,6 @@ class MenuTypeAdmin extends AbstractAdmin
             ])
             ->add('slug', null, [
                 'label' => 'admin.menu_type.slug'
-            ])
-            ->add('description', null, [
-                'label' => 'admin.menu_type.description'
             ])
             ->add('_action', 'actions', [
                 'label'   => 'admin.actions',

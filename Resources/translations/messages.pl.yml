@@ -104,7 +104,6 @@ admin:
 
     menu_type:
         name: Nazwa
-        description: Opis
         slug: Nazwa w URL
         side_menu:
             menu: Menu
