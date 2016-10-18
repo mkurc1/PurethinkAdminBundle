@@ -1,4 +1,5 @@
 parameters:
+    sonata.media.admin.media.class: Purethink\AdminBundle\Admin\MediaAdmin
     app.menu.classess:
         Article: Purethink\CMSBundle\Entity\MenuArticle
         Url: Purethink\CMSBundle\Entity\MenuUrl
