@@ -24,8 +24,10 @@ class ArticleAdmin extends AbstractAdmin
     ];
 
     protected $datagridValues = [
-        'createdAt' => ['type' => DateType::TYPE_GREATER_THAN],
-        'updatedAt' => ['type' => DateType::TYPE_GREATER_THAN]
+        'createdAt'   => ['type' => DateType::TYPE_GREATER_THAN],
+        'updatedAt'   => ['type' => DateType::TYPE_GREATER_THAN],
+        '_sort_by'    => 'createdAt',
+        '_sort_order' => 'DESC'
     ];
 
 
