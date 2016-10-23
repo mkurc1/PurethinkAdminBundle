@@ -14,13 +14,16 @@ class UserAdmin extends BaseUserAdmin
         $listMapper
             ->addIdentifier('username')
             ->add('email')
-            ->add('enabled', null, ['editable' => true])
-            ->add('locked', null, ['editable' => true])
+            ->add('enabled', null, ['editable' => true, 'ajax_hidden' => true])
+            ->add('locked', null, ['editable' => true, 'ajax_hidden' => true])
             ->add('createdAt');
 
         if ($this->isGranted('ROLE_ALLOWED_TO_SWITCH')) {
             $listMapper
-                ->add('impersonating', 'string', ['template' => 'SonataUserBundle:Admin:Field/impersonating.html.twig']);
+                ->add('impersonating', 'string', [
+                    'ajax_hidden' => true,
+                    'template'    => 'SonataUserBundle:Admin:Field/impersonating.html.twig'
+                ]);
         }
     }
 
