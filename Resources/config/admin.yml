@@ -7,13 +7,23 @@ parameters:
         Section: Purethink\CMSBundle\Entity\MenuSection
 
 services:
+    sonata.user.admin.user:
+        class: "%sonata.user.admin.user.class%"
+        tags:
+            - { name: "sonata.admin", manager_type: "orm", group: "%sonata.user.admin.groupname%", label: "users", label_catalogue: "%sonata.user.admin.label_catalogue%", label_translator_strategy: "sonata.admin.label.strategy.underscore", icon: "%sonata.user.admin.groupicon%" }
+        arguments: [null, '%sonata.user.admin.user.entity%', '%sonata.user.admin.user.controller%']
+        calls:
+            - [ setUserManager, ['@fos_user.user_manager'] ]
+            - [ setTranslationDomain, ['%sonata.user.admin.user.translation_domain%'] ]
+            - [ setTokenStorage, ['@security.token_storage'] ]
+
     app.admin.language:
         tags:
             - { name: sonata.admin, manager_type: orm, group: CMS, label: "admin.sidebar.language" }
         class: Purethink\AdminBundle\Admin\LanguageAdmin
         arguments: [null, Purethink\CMSBundle\Entity\Language, 'PurethinkAdminBundle:Admin\LanguageAdmin']
         calls:
-            - [ setPositionService, ['@pix_sortable_behavior.position']]
+            - [ setPositionService, ['@pix_sortable_behavior.position'] ]
 
     app.admin.site:
         tags:

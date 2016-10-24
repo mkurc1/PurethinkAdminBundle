@@ -6,9 +6,16 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\UserBundle\Admin\Entity\UserAdmin as BaseUserAdmin;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class UserAdmin extends BaseUserAdmin
 {
+    /**
+     * @var TokenStorageInterface
+     */
+    private $tokenStorage;
+
+
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
@@ -72,7 +79,8 @@ class UserAdmin extends BaseUserAdmin
             ])
             ->end();
 
-        if ($this->getSubject() && $this->getSubject()->hasRole('ROLE_SUPER_ADMIN')) {
+        $loggedUser = $this->getUser();
+        if ($loggedUser && $loggedUser->hasRole('ROLE_SUPER_ADMIN')) {
             $formMapper
                 ->with('Management', ['class' => 'col-md-6'])
                 ->add('realRoles', 'sonata_security_roles', [
@@ -89,5 +97,20 @@ class UserAdmin extends BaseUserAdmin
         }
 
         $formMapper->end();
+    }
+
+    public function setTokenStorage(TokenStorageInterface $tokenStorage)
+    {
+        $this->tokenStorage = $tokenStorage;
+    }
+
+    protected function getTokenStorage()
+    {
+        return $this->tokenStorage;
+    }
+
+    protected function getUser()
+    {
+        return $this->getTokenStorage()->getToken()->getUser();
     }
 }
