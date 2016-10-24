@@ -42,7 +42,9 @@ class LanguageAdmin extends AbstractAdmin
 
     protected function configureRoutes(RouteCollection $collection)
     {
-        $collection->add('move', $this->getRouterIdParameter() . '/move/{position}');
+        $collection
+            ->add('move', $this->getRouterIdParameter() . '/move/{position}')
+            ->remove('export');
     }
 
     protected function configureFormFields(FormMapper $formMapper)

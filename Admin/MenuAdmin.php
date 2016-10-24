@@ -13,6 +13,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
+use Sonata\AdminBundle\Route\RouteCollection;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class MenuAdmin extends AbstractAdmin
@@ -34,6 +35,12 @@ class MenuAdmin extends AbstractAdmin
         'createdAt' => ['type' => DateType::TYPE_GREATER_THAN],
         'updatedAt' => ['type' => DateType::TYPE_GREATER_THAN]
     ];
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->remove('export');
+    }
 
     protected function configureFormFields(FormMapper $formMapper)
     {

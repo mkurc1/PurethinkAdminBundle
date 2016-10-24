@@ -4,6 +4,7 @@ namespace Purethink\AdminBundle\Admin;
 
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\UserBundle\Admin\Entity\UserAdmin as BaseUserAdmin;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
@@ -15,6 +16,12 @@ class UserAdmin extends BaseUserAdmin
      */
     private $tokenStorage;
 
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->remove('export');
+    }
 
     protected function configureListFields(ListMapper $listMapper)
     {

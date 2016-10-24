@@ -8,12 +8,19 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 class MenuTypeAdmin extends AbstractAdmin
 {
     protected $datagridValues = [
         '_sort_by' => 'name'
     ];
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->remove('export');
+    }
 
     protected function configureSideMenu(MenuItemInterface $menu, $action, AdminInterface $childAdmin = null)
     {

@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
 
@@ -30,6 +31,11 @@ class ArticleAdmin extends AbstractAdmin
         '_sort_order' => 'DESC'
     ];
 
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->remove('export');
+    }
 
     protected function configureFormFields(FormMapper $formMapper)
     {

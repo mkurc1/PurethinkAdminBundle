@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 class ExtensionAdmin extends AbstractAdmin
 {
@@ -19,6 +20,12 @@ class ExtensionAdmin extends AbstractAdmin
     protected $formOptions = [
         'cascade_validation' => true
     ];
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->remove('export');
+    }
 
     protected function configureFormFields(FormMapper $formMapper)
     {

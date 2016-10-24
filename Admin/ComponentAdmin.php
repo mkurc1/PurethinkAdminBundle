@@ -11,6 +11,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Knp\Menu\ItemInterface as MenuItemInterface;
 use Sonata\AdminBundle\Admin\AdminInterface;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 class ComponentAdmin extends AbstractAdmin
 {
@@ -22,6 +23,12 @@ class ComponentAdmin extends AbstractAdmin
         'createdAt' => ['type' => DateType::TYPE_GREATER_THAN],
         'updatedAt' => ['type' => DateType::TYPE_GREATER_THAN]
     ];
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->remove('export');
+    }
 
     protected function configureSideMenu(MenuItemInterface $menu, $action, AdminInterface $childAdmin = null)
     {

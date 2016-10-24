@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 class TagAdmin extends AbstractAdmin
 {
@@ -19,8 +20,13 @@ class TagAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name')
-            ->add('context');
+            ->add('name');
+    }
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->remove('export');
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
@@ -46,9 +52,6 @@ class TagAdmin extends AbstractAdmin
         $listMapper
             ->addIdentifier('name')
             ->addIdentifier('slug')
-            ->add('context', null, [
-                'sortable' => 'context.name',
-            ])
             ->add("createdAt")
             ->add('updatedAt');
     }

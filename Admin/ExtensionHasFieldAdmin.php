@@ -5,9 +5,16 @@ namespace Purethink\AdminBundle\Admin;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Form\FormMapper;
 use Purethink\CMSBundle\Entity\ExtensionHasField;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 class ExtensionHasFieldAdmin extends AbstractAdmin
 {
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->remove('export');
+    }
+
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper

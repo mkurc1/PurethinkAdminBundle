@@ -7,6 +7,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
+use Sonata\AdminBundle\Route\RouteCollection;
 
 class ContactAdmin extends AbstractAdmin
 {
@@ -15,6 +16,12 @@ class ContactAdmin extends AbstractAdmin
         '_sort_order' => 'DESC',
         'createdAt'   => ['type' => DateType::TYPE_GREATER_THAN]
     ];
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->remove('export');
+    }
 
     protected function configureFormFields(FormMapper $formMapper)
     {
