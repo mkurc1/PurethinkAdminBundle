@@ -55,15 +55,15 @@ sonata_admin:
     dashboard:
         blocks:
             -
-                class:    col-lg-3 col-xs-6
+                class:    col-lg-4 col-xs-6
                 position: top
                 type: purethink.admin.block.article
             -
-                class:    col-lg-3 col-xs-6
+                class:    col-lg-4 col-xs-6
                 position: top
                 type: purethink.admin.block.user
             -
-                class:    col-lg-3 col-xs-6
+                class:    col-lg-4 col-xs-6
                 position: top
                 type: purethink.admin.block.contact
             -
