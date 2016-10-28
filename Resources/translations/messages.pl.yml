@@ -24,6 +24,11 @@ admin:
     options: Opcje
     id: ID
 
+    block:
+        article:
+            available_articles: Dostępne artykuły
+            view_more: Zobacz więcej
+
     sidebar:
         language: Języki
         site: Ogólne ustawienia

@@ -54,7 +54,13 @@ sonata_admin:
     show_mosaic_button: false
     dashboard:
         blocks:
-            - { position: left, type: sonata.admin.block.admin_list }
+            -
+                class:    col-lg-3 col-xs-6
+                position: top
+                type: purethink.admin.block.article
+            -
+                position: left
+                type: sonata.admin.block.admin_list
         groups:
             sonata.admin.group.content:
                 label: admin.dashboard.cms
@@ -98,10 +104,8 @@ sonata_block:
             contexts: [admin]
         sonata.admin.block.search_result:
             contexts: [admin]
-        sonata.block.service.text:
-        sonata.user.block.account:
-        sonata.user.block.menu:
-            contexts: [user]
+        purethink.admin.block.article:
+            contexts: [admin]
         app.block.language:
         app.block.menu:
         app.block.component:
