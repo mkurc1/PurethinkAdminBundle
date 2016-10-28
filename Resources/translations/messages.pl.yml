@@ -28,6 +28,9 @@ admin:
         article:
             available_articles: Dostępne artykuły
             view_more: Zobacz więcej
+        user:
+            available_users: Dostępni użytkownicy
+            view_more: Zobacz więcej
 
     sidebar:
         language: Języki

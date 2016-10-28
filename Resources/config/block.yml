@@ -4,3 +4,9 @@ services:
         tags:
             - { name: sonata.block }
         arguments: ["purethink.admin.block.article", '@templating', '@doctrine.orm.entity_manager']
+
+    purethink.admin.block.user:
+        class: Purethink\AdminBundle\Block\UserBlock
+        tags:
+            - { name: sonata.block }
+        arguments: ["purethink.admin.block.user", '@templating', '@doctrine.orm.entity_manager']
