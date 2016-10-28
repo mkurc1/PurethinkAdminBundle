@@ -63,6 +63,10 @@ sonata_admin:
                 position: top
                 type: purethink.admin.block.user
             -
+                class:    col-lg-3 col-xs-6
+                position: top
+                type: purethink.admin.block.contact
+            -
                 position: left
                 type: sonata.admin.block.admin_list
         groups:
@@ -111,6 +115,8 @@ sonata_block:
         purethink.admin.block.article:
             contexts: [admin]
         purethink.admin.block.user:
+            contexts: [admin]
+        purethink.admin.block.contact:
             contexts: [admin]
         app.block.language:
         app.block.menu:

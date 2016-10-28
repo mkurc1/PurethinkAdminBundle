@@ -81,6 +81,9 @@ class ContactAdmin extends AbstractAdmin
             ->add('subject', null, [
                 'label' => 'admin.contact.subject'
             ])
+            ->add('response', null, [
+                'label' => 'admin.contact.response'
+            ])
             ->add('createdAt', 'doctrine_orm_datetime', [
                 'label'         => 'admin.created_at',
                 'field_type'    => 'sonata_type_datetime_picker',

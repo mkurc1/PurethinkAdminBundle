@@ -10,3 +10,9 @@ services:
         tags:
             - { name: sonata.block }
         arguments: ["purethink.admin.block.user", '@templating', '@doctrine.orm.entity_manager']
+
+    purethink.admin.block.contact:
+        class: Purethink\AdminBundle\Block\ContactBlock
+        tags:
+            - { name: sonata.block }
+        arguments: ["purethink.admin.block.contact", '@templating', '@doctrine.orm.entity_manager']

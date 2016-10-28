@@ -31,6 +31,9 @@ admin:
         user:
             available_users: Dostępni użytkownicy
             view_more: Zobacz więcej
+        contact:
+            contact_request: Prośby o kontakt
+            view_more: Zobacz więcej
 
     sidebar:
         language: Języki
