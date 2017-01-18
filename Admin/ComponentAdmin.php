@@ -16,7 +16,7 @@ use Sonata\AdminBundle\Route\RouteCollection;
 class ComponentAdmin extends AbstractAdmin
 {
     /** @var Language */
-    private $language;
+    protected $language;
 
     protected $datagridValues = [
         '_sort_by'  => 'name',
