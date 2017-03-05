@@ -25,9 +25,9 @@ class ArticleAdmin extends AbstractAdmin
     ];
 
     protected $datagridValues = [
-        'createdAt'   => ['type' => DateType::TYPE_GREATER_THAN],
-        'updatedAt'   => ['type' => DateType::TYPE_GREATER_THAN],
-        '_sort_by'    => 'createdAt',
+        'createdAt' => ['type' => DateType::TYPE_GREATER_THAN],
+        'updatedAt' => ['type' => DateType::TYPE_GREATER_THAN],
+        '_sort_by' => 'createdAt',
         '_sort_order' => 'DESC'
     ];
 
@@ -42,65 +42,73 @@ class ArticleAdmin extends AbstractAdmin
         $formMapper
             ->with('admin.general', ['class' => 'col-md-8'])
             ->add('translations', 'a2lix_translations', [
-                'label'          => false,
-                'locales'        => $this->language->getAvailableLocales(),
-                'fields'         => [
-                    'name'        => [
+                'label' => false,
+                'locales' => $this->language->getAvailableLocales(),
+                'fields' => [
+                    'name' => [
                         'label' => 'admin.article.name',
                     ],
-                    'slug'        => [
+                    'slug' => [
                         'label' => 'admin.article.slug'
                     ],
-                    'content'     => [
-                        'field_type'  => 'ckeditor',
+                    'content' => [
+                        'field_type' => 'ckeditor',
                         'config_name' => 'default',
-                        'label'       => 'admin.article.content'
+                        'label' => 'admin.article.content'
                     ],
-                    'excerpt'     => [
-                        'field_type'  => 'ckeditor',
+                    'excerpt' => [
+                        'field_type' => 'ckeditor',
                         'config_name' => 'excerpt',
-                        'label'       => 'admin.article.excerpt'
+                        'label' => 'admin.article.excerpt'
                     ],
-                    'keyword'     => [
+                    'keyword' => [
                         'field_type' => 'textarea',
-                        'label'      => 'admin.metadata.keyword'
+                        'label' => 'admin.metadata.keyword'
                     ],
                     'description' => [
                         'field_type' => 'textarea',
-                        'label'      => 'admin.metadata.description'
+                        'label' => 'admin.metadata.description'
                     ]
                 ],
                 'exclude_fields' => ['createdAt', 'updatedAt', 'deletedAt']
+            ])
+            ->add('sources', 'sonata_type_collection', [
+                'by_reference' => false,
+                'required' => false,
+                'label' => 'admin.article.sources'
+            ], [
+                'edit' => 'inline',
+                'inline' => 'table'
             ])
             ->end()
             ->with('admin.options', ['class' => 'col-md-4'])
             ->add('media', 'sonata_type_model_list', [
                 'required' => false,
-                'label'    => 'admin.article.media'
+                'label' => 'admin.article.media'
             ], [
                 'link_parameters' => [
-                    'context'  => 'default',
+                    'context' => 'default',
                     'provider' => 'sonata.media.provider.image'
                 ]
             ])
             ->add('gallery', 'sonata_type_model_list', [
-                'label'    => 'admin.article.gallery',
+                'label' => 'admin.article.gallery',
                 'required' => false
             ])
             ->add('user', 'sonata_type_model_list', [
-                'label'      => 'admin.article.user',
-                'btn_add'    => false,
+                'label' => 'admin.article.user',
+                'btn_add' => false,
                 'btn_delete' => false
             ])
             ->add('published', null, [
                 'label' => 'admin.article.published'
             ])
             ->add('category', 'sonata_type_model_list', [
-                'label'    => 'admin.article.category',
+                'label' => 'admin.article.category',
                 'required' => false
             ])
             ->add('tags', 'sonata_type_model', [
-                'label'    => 'admin.article.tags',
+                'label' => 'admin.article.tags',
                 'multiple' => true,
                 'required' => false
             ])
@@ -120,15 +128,15 @@ class ArticleAdmin extends AbstractAdmin
                 'label' => 'admin.article.user'
             ])
             ->add('createdAt', 'doctrine_orm_datetime', [
-                'label'         => 'admin.created_at',
-                'field_type'    => 'sonata_type_datetime_picker',
+                'label' => 'admin.created_at',
+                'field_type' => 'sonata_type_datetime_picker',
                 'field_options' => [
                     'format' => 'dd MMM yyyy, HH:mm',
                 ]
             ])
             ->add('updatedAt', 'doctrine_orm_datetime', [
-                'label'         => 'admin.updated_at',
-                'field_type'    => 'sonata_type_datetime_picker',
+                'label' => 'admin.updated_at',
+                'field_type' => 'sonata_type_datetime_picker',
                 'field_options' => [
                     'format' => 'dd MMM yyyy, HH:mm',
                 ]
@@ -152,7 +160,7 @@ class ArticleAdmin extends AbstractAdmin
             ])
             ->add('published', null, [
                 'editable' => true,
-                'label'    => 'admin.article.published'
+                'label' => 'admin.article.published'
             ])
             ->add("createdAt", null, [
                 'label' => 'admin.created_at'
@@ -170,7 +178,7 @@ class ArticleAdmin extends AbstractAdmin
             ])
             ->add('content', null, [
                 'label' => 'admin.article.content',
-                'safe'  => true
+                'safe' => true
             ])
             ->add('published', null, [
                 'label' => 'admin.article.published'

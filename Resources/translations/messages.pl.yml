@@ -57,6 +57,11 @@ admin:
         gallery: Galeria
         tags: Tagi
         category: Kategoria
+        sources: Źródła
+
+    article_source:
+        name: Nazwa źródła
+        url: Adres
 
     component:
         name: Nazwa
