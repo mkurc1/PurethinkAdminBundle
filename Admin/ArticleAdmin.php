@@ -10,6 +10,8 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Form\Type\Filter\DateType;
+use Sonata\DoctrineORMAdminBundle\Datagrid\ProxyQuery;
+use Doctrine\ORM\QueryBuilder;
 
 class ArticleAdmin extends AbstractAdmin
 {
@@ -30,6 +32,19 @@ class ArticleAdmin extends AbstractAdmin
         '_sort_by' => 'createdAt',
         '_sort_order' => 'DESC'
     ];
+
+    public function createQuery($context = 'list')
+    {
+        /** @var ProxyQuery $query */
+        $query = parent::createQuery($context);
+        /** @var QueryBuilder $qb */
+        $qb = $query->getQueryBuilder();
+        $qb->addSelect('t', 'v')
+            ->join($qb->getRootAliases()[0] . '.translations', 't')
+            ->join($qb->getRootAliases()[0] . '.view', 'v');
+
+        return $query;
+    }
 
     protected function configureRoutes(RouteCollection $collection)
     {
