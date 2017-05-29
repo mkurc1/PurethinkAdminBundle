@@ -133,6 +133,7 @@ ivory_ck_editor:
         default:
             toolbar: "cke_toolbar"
             height: "400px"
+            entities_latin: false
             filebrowserBrowseRoute: admin_purethink_core_media_ckeditor_browser
             filebrowserImageBrowseRoute: admin_purethink_core_media_ckeditor_browser
             filebrowserImageBrowseRouteParameters:
@@ -146,6 +147,7 @@ ivory_ck_editor:
         excerpt:
             toolbar: "cke_toolbar"
             height: "200px"
+            entities_latin: false
             filebrowserBrowseRoute: admin_purethink_core_media_ckeditor_browser
             filebrowserImageBrowseRoute: admin_purethink_core_media_ckeditor_browser
             filebrowserImageBrowseRouteParameters:
